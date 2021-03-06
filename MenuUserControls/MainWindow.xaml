@@ -1,0 +1,35 @@
+﻿<Window x:Class="MenuUserControls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MenuUserControls.UserControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem x:Name="menuHome" Header="Home" Click="menuHome_Click" >
+
+            </MenuItem>
+            <MenuItem x:Name="menuNnews" Header="News" Click="menuNnews_Click" >
+
+            </MenuItem>
+            <MenuItem x:Name="menuMusic" Header="Music" Click="menuMusic_Click">
+
+            </MenuItem>
+            <MenuItem x:Name="menuGames" Header="Games" Click="menuGames_Click">
+
+            </MenuItem>
+        </Menu>
+        <Grid Grid.Row="1">
+            <local:Home x:Name="Home"></local:Home>
+            <local:Music x:Name="Music" Visibility="Collapsed"/>
+            <local:News x:Name="News" Visibility="Collapsed"/>
+            <local:Games x:Name="Games" Visibility="Collapsed"/>
+        </Grid>
+    </Grid>
+</Window>
